@@ -4,6 +4,7 @@ import DatePicker from "react-datepicker";
 import Select from 'react-select';
 import {createNotification} from './reactNotifications';
 
+import '../index.css'
 import "react-datepicker/dist/react-datepicker.css";
 import 'rc-checkbox/assets/index.css';
 import 'react-notifications/lib/notifications.css';
@@ -63,18 +64,15 @@ class FormComponent extends Component {
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
-                <label>
-                    Country:
-                    <Select value={this.state.selectedOption} onChange={this.handleSelectCountryChange} options={options}/>
-                    CheckBox:
-                    <CheckBox checked={this.state.check} onChange={this.handleCheckBoxChange} defaultChecked/><br/>
-                    Name:
-                    <input type="text" value={this.state.name} onChange={this.handleNameChange}/><br/>
-                    Start Date:
-                    <DatePicker selected={this.state.startDate} onChange={this.handleStartDateChange}/><br/>
-                    <a href="http://github.com/JedWatson/react-select">Code and Docs on GitHub</a><br/>
-                    <input type="text" value={this.state.notification} onChange={this.handleNotificationChange}/>
-                </label>
+                <label>Country:</label><br/>
+                <Select value={this.state.selectedOption} onChange={this.handleSelectCountryChange} options={options}/>
+                <label>Name:</label><br/>
+                <input type="text" value={this.state.name} onChange={this.handleNameChange}/><br/>
+                <label>Remember:</label><br/>
+                <CheckBox checked={this.state.check} onChange={this.handleCheckBoxChange} defaultChecked/><br/>
+                <a href="http://github.com/JedWatson/react-select">Code and Docs on GitHub</a><br/>
+                <label>Start Date:</label><br/>
+                <DatePicker selected={this.state.startDate} onChange={this.handleStartDateChange}/><br/><br/>
                 <input type="submit" value="Submit" />
             </form>
         );
