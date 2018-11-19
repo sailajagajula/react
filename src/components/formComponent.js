@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import CheckBox from 'rc-checkbox';
 import DatePicker from "react-datepicker";
 import Select from 'react-select';
-import {createNotification} from './reactNotifications';
+import {createNotification} from './commonComponents/reactNotificationsComponent';
 
 import '../index.css'
 import "react-datepicker/dist/react-datepicker.css";
