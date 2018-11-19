@@ -44,8 +44,6 @@ class FormComponent extends Component {
 
     handleStartDateChange(date) {
         this.setState({ startDate: date });
-        const createFillAllFieldsError = createNotification('fill-all-fields-error', "Testing notifications");
-        createFillAllFieldsError()
     }
 
     handleNameChange(event) {
@@ -57,7 +55,8 @@ class FormComponent extends Component {
     }
 
     handleSubmit(event) {
-        alert('A name was submitted: ' + this.state.check);
+        const createFillAllFieldsError = createNotification('success', "Form is successfully submitted!");
+        createFillAllFieldsError()
         event.preventDefault();
     }
 
